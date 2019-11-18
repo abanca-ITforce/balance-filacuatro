@@ -1,6 +1,7 @@
 
 body{
   min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 :host,
@@ -37,4 +38,18 @@ body{
     display: flex;
     flex-direction: column;
   }
+}
+.top {
+  background-color: darkseagreen;
+  text-align: center;
+}
+
+footer {
+  background-color: darkseagreen;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
