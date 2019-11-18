@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o --port=4211",
-    "build": "ng build --prod --baseHref=/dist/balance/",
+    "build": "ng build --prod --baseHref=/dist/balance-filacuatro/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
