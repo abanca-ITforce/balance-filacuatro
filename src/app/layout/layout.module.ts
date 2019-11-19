@@ -7,10 +7,14 @@ import { CopyrightComponent } from './shell/copyright/copyright.component';
 
 
 
+
 @NgModule({
   declarations: [ShellComponent, TopBarComponent, MainContentComponent, CopyrightComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ShellComponent
   ]
 })
 export class LayoutModule { }
