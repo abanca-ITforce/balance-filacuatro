@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ShellComponent } from './layout/shell/shell.component';
+import { HomeComponent } from './home/home/home.component';
 
 
 const routes: Routes = [] = [
-  { path: '', component: ShellComponent },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({
