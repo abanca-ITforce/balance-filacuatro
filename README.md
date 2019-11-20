@@ -1,4 +1,16 @@
-# Balance
+# Balance FilaCuatro
+
+
+### Fecha de inicio 📋
+
+Lunes, 18 de Noviembre de 2019_
+
+
+## Autores ✒️
+
+* **Assis**
+* **Cris**
+* **Adrián**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
