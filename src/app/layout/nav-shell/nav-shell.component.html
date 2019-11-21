@@ -10,7 +10,6 @@
       <a mat-list-item routerLink="movement">Movement details.</a>
     </mat-nav-list>
   </mat-sidenav>
-  <router-outlet></router-outlet>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
@@ -21,8 +20,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>balance</span>
+      <span routerLink="">balance</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
