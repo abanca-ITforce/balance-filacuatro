@@ -1,4 +1,4 @@
-<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="newMovementForm" novalidate (ngSubmit)="onSubmit()">
   <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Add new movement</mat-card-title>
@@ -7,51 +7,48 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Description" formControlName="company">
+            <input matInput placeholder="Description" formControlName="description">
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
             <mat-form-field class="full-width">
-                <input matInput placeholder="Amount" formControlName="company">
+                <input matInput type="number"  placeholder="Amount" formControlName="amount">
               </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
             <mat-form-field class="full-width">
-                <input matInput type="text" placeholder="Date" formControlName="company" >
+                <input matInput type="text" placeholder="Date" formControlName="date" >
               </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
             <mat-form-field class="full-width">
-
-
                   <mat-label>Concept</mat-label>
-                  <select matNativeControl required>
+                  <select matNativeControl formControlName="conceptType">
                     <option value="Salary">Salary</option>
                     <option value="Food">Food</option>
                     <option value="Transport">Transport</option>
                     <option value="Others">Others</option>
                   </select>
-
               </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <mat-radio-group formControlName="shipping">
-            <mat-radio-button value="free">Income</mat-radio-button>
-            <mat-radio-button value="priority">Expense</mat-radio-button>
+          <mat-radio-group formControlName="type">
+            <mat-radio-button value="income">Income</mat-radio-button>
+            <mat-radio-button value="expense">Expense</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="newMovementForm.invalid">Submit</button>
     </mat-card-actions>
   </mat-card>
 </form>
