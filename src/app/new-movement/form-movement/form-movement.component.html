@@ -17,13 +17,16 @@
         <div class="col">
             <mat-form-field class="full-width">
                 <input matInput type="number"  placeholder="Amount" formControlName="amount">
+                <mat-error *ngIf="detectError('amount','min')">You need to put more than 0</mat-error>
+                <mat-error *ngIf="isTouched('amount','min')">You need to put an amount</mat-error>
               </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
             <mat-form-field class="full-width">
-                <input matInput type="text" placeholder="Date" formControlName="date" >
+                <input matInput placeholder="Date" type="date" formControlName="date" >
+                <mat-error *ngIf="detectError('date','required')">You need to fill the field</mat-error>
               </mat-form-field>
         </div>
       </div>
@@ -37,6 +40,7 @@
                     <option value="Transport">Transport</option>
                     <option value="Others">Others</option>
                   </select>
+                  <mat-error *ngIf="detectError('conceptType','required')">Choose a concept</mat-error>
               </mat-form-field>
         </div>
       </div>
