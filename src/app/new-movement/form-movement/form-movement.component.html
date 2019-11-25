@@ -18,7 +18,7 @@
             <mat-form-field class="full-width">
                 <input matInput type="number"  placeholder="Amount" formControlName="amount">
                 <mat-error *ngIf="detectError('amount','min')">You need to put more than 0</mat-error>
-                <mat-error *ngIf="isTouched('amount','min')">You need to put an amount</mat-error>
+                <mat-error *ngIf="isTouched('amount')">You need to put an amount</mat-error>
               </mat-form-field>
         </div>
       </div>
