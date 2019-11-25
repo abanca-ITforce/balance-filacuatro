@@ -8,9 +8,8 @@
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Description" formControlName="description">
-            <mat-error *ngIf="hasErrors('description')">error
-                <span *ngIf="detectError('description', 'required')">rellena el campo</span>
-              </mat-error>
+             <mat-error *ngIf="detectError('description', 'required')">Fill the field</mat-error>
+            <mat-error *ngIf="detectError('description','minlength')">You need 4 characters</mat-error>
           </mat-form-field>
         </div>
       </div>
