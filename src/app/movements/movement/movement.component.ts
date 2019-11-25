@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovementComponent implements OnInit {
   public movementDescription: string;
+  /* Podriamos recibir in Id y tener aqui replicado el array, a traves de ese id acceder a sus ppiedades */
   constructor(activatedRoute: ActivatedRoute) {
   this.movementDescription = activatedRoute.snapshot.params.id;
    }

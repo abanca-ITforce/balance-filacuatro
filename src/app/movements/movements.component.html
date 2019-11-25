@@ -5,4 +5,4 @@
   <a mat-list-item routerLink="movement" > Amazon - 18.69€</a>
 </mat-nav-list> -->
 
-<li *ngFor="let movement of movements"><a [routerLink]="movement.amount">{{ movement.description }} - {{movement.amount}} €</a></li>
+<li *ngFor="let movement of movements"><a [routerLink]="movement.description">{{ movement.description }} - {{movement.amount}} €</a></li>
