@@ -30,6 +30,8 @@ constructor(formBuilder: FormBuilder){
 
   onSubmit() {
     alert(JSON.stringify(this.newMovementForm.value));
+    this.newMovementForm.disable();
+    document.getElementById("edit").style.display="block";
   }
 
   hasErrors(controlName: string) {
