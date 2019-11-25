@@ -20,6 +20,29 @@
       </div>
       <div class="row">
         <div class="col">
+            <mat-form-field class="full-width">
+                <input matInput type="text" placeholder="Date" formControlName="company" >
+              </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <mat-form-field class="full-width">
+
+
+                  <mat-label>Concept</mat-label>
+                  <select matNativeControl required>
+                    <option value="Salary">Salary</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Others">Others</option>
+                  </select>
+
+              </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
           <mat-radio-group formControlName="shipping">
             <mat-radio-button value="free">Income</mat-radio-button>
             <mat-radio-button value="priority">Expense</mat-radio-button>

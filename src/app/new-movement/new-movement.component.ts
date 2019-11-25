@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'abanca-new-movement',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewMovementComponent implements OnInit {
 
-  constructor() { }
+  constructor(formBuilder : FormBuilder) {
+    formBuilder.group({
+
+    })
+  }
 
   ngOnInit() {
   }
