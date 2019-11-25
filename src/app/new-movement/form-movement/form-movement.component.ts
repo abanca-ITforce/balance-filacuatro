@@ -31,6 +31,17 @@ constructor(formBuilder: FormBuilder){
   onSubmit() {
     alert(JSON.stringify(this.newMovementForm.value));
   }
+
+  hasErrors(controlName: string) {
+    return this.newMovementForm.controls[controlName].invalid;
+  }
+  isTouched(controlName: string) {
+    return this.newMovementForm.controls[controlName].touched;
+  }
+  detectError(controlName: string, errorName: string) {
+    const control = this.newMovementForm.controls[controlName];
+    return control.hasError(errorName);
+  }
 }
 
 

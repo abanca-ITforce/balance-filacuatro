@@ -16,7 +16,6 @@ export class NewMovementComponent implements OnInit {
 
   ngOnInit() {
   }
-hasError(controlName : string)
 
 }
 
