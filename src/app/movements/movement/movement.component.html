@@ -11,7 +11,9 @@
     <mat-card-header>
       <div mat-card-avatar ></div>
       <mat-card-title>{{movementDescription}}</mat-card-title>
-      <mat-card-subtitle>{{movementDescription}}</mat-card-subtitle>
+
+
+
     </mat-card-header>
 
     <mat-card-actions>
@@ -19,4 +21,13 @@
       <button mat-button>Delete</button>
     </mat-card-actions>
   </mat-card>
+  <!--<mat-nav-list>
+    <a
+      *ngFor="let movement of movementsList"
+      mat-list-item
+      [routerLink]="movement.description"
+    >
+      {{ movement.description }}
+    </a>
+  </mat-nav-list>-->
 

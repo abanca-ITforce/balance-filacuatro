@@ -12,6 +12,7 @@ export class FormMovementService {
     const temp = localStorage.getItem('movementsList');
     if (temp) {
       this.movementsList = JSON.parse(temp);
+
     } else {
       this.movementsList = [];
     }

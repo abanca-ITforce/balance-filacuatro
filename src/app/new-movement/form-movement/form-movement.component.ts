@@ -11,7 +11,9 @@ import { FormMovementService } from './form-movement.service';
 export class FormMovementComponent {
   newMovementForm: FormGroup;
     private newMovement = {
+    ident : 0,
     description: '',
+    hola: 'hola',
     amount: '',
     date: '',
     conceptType: '',
@@ -20,7 +22,9 @@ export class FormMovementComponent {
 
 constructor(formBuilder: FormBuilder, private formMovementService: FormMovementService, private formValidators: FormValidatorsService) {
   this.newMovementForm = formBuilder.group({
+    ident: [new Date().getMilliseconds()],
     description: [this.newMovement.description, [Validators.required, Validators.minLength(4)]],
+    hola: [[]],
     amount: [this.newMovement.amount, [Validators.required, Validators.min(0)]],
     date: [this.newMovement.date, Validators.required],
     conceptType: [this.newMovement.conceptType, Validators.required],
