@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { FormValidatorsService } from 'src/app/form-validators.service';
+import { FormMovementService } from './form-movement.service';
 
 @Component({
   selector: 'abanca-form-movement',
@@ -17,7 +18,7 @@ export class FormMovementComponent {
     type: ''
     };
 
-constructor(formBuilder: FormBuilder, private formValidators: FormValidatorsService) {
+constructor(formBuilder: FormBuilder, private formMovementService: FormMovementService,private formValidators: FormValidatorsService) {
   this.newMovementForm = formBuilder.group({
     description: [this.newMovement.description, [Validators.required, Validators.minLength(4)]],
     amount: [this.newMovement.amount, [Validators.required, Validators.min(0)]],
@@ -30,9 +31,7 @@ constructor(formBuilder: FormBuilder, private formValidators: FormValidatorsServ
 
 
   onSubmit() {
-    alert(JSON.stringify(this.newMovementForm.value));
-    this.newMovementForm.disable();
-    document.getElementById('edit').style.display = 'block';
+    this.formMovementService.save(this.newMovementForm.value);
   }
 
   hasErrors(controlName: string) {
