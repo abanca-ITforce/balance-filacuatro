@@ -39,7 +39,7 @@ constructor(formBuilder: FormBuilder, private formValidators: FormValidatorsServ
     return this.formValidators.hasErrors(this.newMovementForm, controlName);
   }
   isTouched(controlName: string) {
-    return this.newMovementForm.controls[controlName].touched;
+    return this.formValidators.isTouched(this.newMovementForm, controlName);
   }
   detectError(controlName: string, errorName: string) {
     return this.formValidators.hasError(this.newMovementForm, controlName, errorName);
