@@ -5,11 +5,21 @@ import { Injectable } from '@angular/core';
 })
 export class FormMovementService {
 
-  constructor() { }
-  save(movement) {
-    alert(JSON.stringify(this.newMovementForm.value));
-    this.newMovementForm.disable();
-    document.getElementById('edit').style.display = 'block';
-  }
+  movementsList;
 
+  constructor() {
+
+    const temp = localStorage.getItem('movementsList');
+    if (temp) {
+      this.movementsList = JSON.parse(temp);
+    } else {
+      this.movementsList = [];
+    }
+  }
+  postMovement(movement) {
+    console.log('passo 2');
+    this.movementsList.push(movement);
+    localStorage.setItem('movementsList', JSON.stringify(this.movementsList));
+    console.log(JSON.stringify(movement));
+  }
 }

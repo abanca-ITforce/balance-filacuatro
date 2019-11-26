@@ -3,6 +3,16 @@
   <a mat-list-item routerLink="movement" color> Mercadona - 28.15€</a>
   <a mat-list-item routerLink="movement" > Zara - 65.99€</a>
   <a mat-list-item routerLink="movement" > Amazon - 18.69€</a>
+<li *ngFor="let movement of movements"><a [routerLink]="movement.description">{{ movement.description }} - {{movement.amount}} €</a></li>
 </mat-nav-list> -->
 
-<li *ngFor="let movement of movements"><a [routerLink]="movement.description">{{ movement.description }} - {{movement.amount}} €</a></li>
+<mat-nav-list>
+  <a
+    *ngFor="let movement of movementsList"
+    mat-list-item
+    [routerLink]="movement.description"
+  >
+    {{ movement.description }}
+  </a>
+</mat-nav-list>
+

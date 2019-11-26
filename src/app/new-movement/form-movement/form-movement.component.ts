@@ -18,7 +18,7 @@ export class FormMovementComponent {
     type: ''
     };
 
-constructor(formBuilder: FormBuilder, private formMovementService: FormMovementService,private formValidators: FormValidatorsService) {
+constructor(formBuilder: FormBuilder, private formMovementService: FormMovementService, private formValidators: FormValidatorsService) {
   this.newMovementForm = formBuilder.group({
     description: [this.newMovement.description, [Validators.required, Validators.minLength(4)]],
     amount: [this.newMovement.amount, [Validators.required, Validators.min(0)]],
@@ -31,7 +31,8 @@ constructor(formBuilder: FormBuilder, private formMovementService: FormMovementS
 
 
   onSubmit() {
-    this.formMovementService.save(this.newMovementForm.value);
+    this.formMovementService.postMovement(this.newMovementForm.value);
+    console.log('passo 1');
   }
 
   hasErrors(controlName: string) {
