@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { FormValidatorsService } from 'src/app/form-validators.service';
 import { FormMovementService } from './form-movement.service';
@@ -32,10 +32,12 @@ constructor(formBuilder: FormBuilder, private formMovementService: FormMovementS
 
   });
 }
+  @Output() post = new EventEmitter<any>();
 
 
   onSubmit() {
-    this.formMovementService.postMovement(this.newMovementForm.value);
+
+    this.post.emit(this.newMovementForm.value);
     console.log('passo 1');
   }
 
