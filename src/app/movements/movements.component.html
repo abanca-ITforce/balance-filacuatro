@@ -10,9 +10,9 @@
   <a
     *ngFor="let movement of movementsList"
     mat-list-item
-    [routerLink]="movement.id"
+    [routerLink]="movement.description"
   >
-    {{ movement.id }}
+    {{ movement.description }}
   </a>
 </mat-nav-list>
 
