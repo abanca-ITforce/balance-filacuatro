@@ -1,0 +1,33 @@
+<!-- <p>movement works!</p>
+<article>
+  <header>My Movement</header>
+  <main>{{movementDescription}}</main>
+  <footer>
+    <button>Description</button>
+  </footer>
+</article> -->
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar ></div>
+      <mat-card-title>{{movementDescription}}</mat-card-title>
+
+
+
+    </mat-card-header>
+
+    <mat-card-actions>
+      <button mat-button>Save</button>
+      <button mat-button>Delete</button>
+    </mat-card-actions>
+  </mat-card>
+  <!--<mat-nav-list>
+    <a
+      *ngFor="let movement of movementsList"
+      mat-list-item
+      [routerLink]="movement.description"
+    >
+      {{ movement.description }}
+    </a>
+  </mat-nav-list>-->
+
