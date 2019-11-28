@@ -6,13 +6,13 @@
 <li *ngFor="let movement of movements"><a [routerLink]="movement.description">{{ movement.description }} - {{movement.amount}} €</a></li>
 </mat-nav-list> -->
 
-<mat-nav-list>
+<mat-nav-list *ngIf = "movementsList$ | async as movementsList; else empty" >
   <a
     *ngFor="let movement of movementsList"
     mat-list-item
     [routerLink]="movement.description"
   >
-    {{ movement.description }}
+    {{ movement.description}}
   </a>
 </mat-nav-list>
-
+<ng-template #empty> <h1>Loading...</h1> </ng-template>

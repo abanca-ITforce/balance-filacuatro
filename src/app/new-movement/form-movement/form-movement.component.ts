@@ -20,7 +20,10 @@ export class FormMovementComponent {
     type: ''
     };
 
+
+
 constructor(formBuilder: FormBuilder, private formMovementService: FormMovementService, private formValidators: FormValidatorsService) {
+
   this.newMovementForm = formBuilder.group({
     ident: [new Date().getMilliseconds()],
     description: [this.newMovement.description, [Validators.required, Validators.minLength(4)]],
